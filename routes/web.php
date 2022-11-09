@@ -26,6 +26,10 @@ Route::get('/funcionarios/create', [FuncionarioController::class, 'create'])->na
 
 Route::post('/funcionarios/', [FuncionarioController::class, 'store'])->name('funcionarios.store');
 
+Route::post('/cargos/', [CargoController::class, 'store'])->name('cargos.store');
+
+Route::post('/departamentos/', [DepartamentoController::class, 'store'])->name('departamentos.store');
+
 Route::get('/cargos/create', [CargoController::class, 'create'])->name('cargos.create');
 
 Route::get('/cargos', [CargoController::class, 'index'])->name('cargos.index');
