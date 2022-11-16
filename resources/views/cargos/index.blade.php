@@ -14,9 +14,7 @@
             <input type="text" name="buscaCargo" class="form-control form-control-lg" placeholder="Descrição do Cargo">
             <button class="btn btn-primary btn-lg" type="submit">Procurar</button>
         </div>
-        <a href="" class="btn btn-light border btn-lg">Limpar</a>
-    </form>
-
+        <a href="{{ route('departamentos.index') }}" class="btn btn-light border btn-lg">Limpar</a>    </form>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead class="table-dark">
