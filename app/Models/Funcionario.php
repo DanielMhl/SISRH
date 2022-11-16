@@ -10,8 +10,7 @@ class Funcionario extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome','data_nasc', 'cpf',  'email', 'telefone', 'foto', 'salario', 'sexo', 
-        'id_departamento', 'id_cargo', 'id_user'
+        'nome', 'data_nasc', 'sexo', 'email', 'telefone', 'cpf', 'foto', 'salario', 'id_cargo', 'id_departamento', 'id_user'
     ];
 
     public function user()

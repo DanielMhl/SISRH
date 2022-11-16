@@ -24,16 +24,20 @@ Route::get('/funcionarios', [FuncionarioController::class, 'index'])->name('func
 
 Route::get('/funcionarios/create', [FuncionarioController::class, 'create'])->name('funcionarios.create');
 
-Route::post('/funcionarios/', [FuncionarioController::class, 'store'])->name('funcionarios.store');
+Route::post('/funcionarios', [FuncionarioController::class, 'store'])->name('funcionarios.store');
 
-Route::post('/cargos/', [CargoController::class, 'store'])->name('cargos.store');
-
-Route::post('/departamentos/', [DepartamentoController::class, 'store'])->name('departamentos.store');
+Route::get('/funcionarios/edit/{id}', [FuncionarioController::class, 'edit'])->name('funcionarios.edit'); //formulário de edição
+Route::put('/funcionarios/{id}', [FuncionarioController::class, 'update'])->name('funcionarios.update'); //atualizar registro
+Route::delete('/funcionarios/{id}', [FuncionarioController::class, 'destroy'])->name('funcionarios.destroy'); //deletar registro
 
 Route::get('/cargos/create', [CargoController::class, 'create'])->name('cargos.create');
 
 Route::get('/cargos', [CargoController::class, 'index'])->name('cargos.index');
 
+Route::post('/cargos', [CargoController::class, 'store'])->name('cargos.store');
+
 Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
 
 Route::get('/departamentos/create', [DepartamentoController::class, 'create'])->name('departamentos.create');
+
+Route::post('/departamentos', [DepartamentoController::class, 'store'])->name('departamentos.store');

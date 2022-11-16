@@ -7,14 +7,14 @@
     <a href="{{ route('cargos.create') }}" class="btn btn-primary position-absolute top-0 end-0 m-4 
     rounded-circle fs-4"><i class="bi bi-plus"></i></a>
 
-    <p>Total de Cargos: {{ $totalcargos }}</p>
+    <p>Total de Cargos: {{ $totalCargos }}</p>
 
     <form action="" method="GET" class="mb-3 d-flex justify-content-end">
         <div class="input-group me-3">
             <input type="text" name="buscaCargo" class="form-control form-control-lg" placeholder="Descrição do Cargo">
             <button class="btn btn-primary btn-lg" type="submit">Procurar</button>
         </div>
-        <a href="{{ route('cargos.index') }}" class="btn btn-light border btn-lg">Limpar</a>
+        <a href="" class="btn btn-light border btn-lg">Limpar</a>
     </form>
 
     <div class="table-responsive">

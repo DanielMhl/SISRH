@@ -10,18 +10,6 @@ class Departamento extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome','id_departamento'
+        'nome'
     ];
-    
-    public function departamento()
-    {
-        return $this->belongsTo(Departamento::class, 'id_departamento');
-    }
-
-    public function cargo()
-    {
-        return $this->belongsTo(Cargo::class, 'id_cargo');
-    }
-
 }
-    

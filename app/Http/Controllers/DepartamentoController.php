@@ -9,9 +9,10 @@ class DepartamentoController extends Controller
 {
     public function index(Request $request)
     {
-        $departamentos = Departamento::where('nome','like', '%'.$request->buscaDepartamento.'%')->orderBy('nome','asc')->get();
-        $totaldepartamentos = Departamento::all()->count();   
-        return view('departamentos.index', compact('departamentos', 'totaldepartamentos'));
+        $departamentos = Departamento::where('nome', 'like', '%'.$request->buscaDepartamento.'%')->orderBy('nome','asc')->get();
+        // $departamentos = Departamento::all();
+        $totalDepartamentos = Departamento::all()->count();                          
+        return view('departamentos.index', compact('departamentos', 'totalDepartamentos'));
     }
 
     public function create()
@@ -21,11 +22,9 @@ class DepartamentoController extends Controller
 
     public function store(Request $request)
     {
-        $input = $request -> toArray();
-    
-        Departamento::Create($input);
+        $input = $request->toArray();
+        Departamento::create($input);
 
-        return redirect()->route('departamentos.index')->with('sucesso', 'Departamento Cadastrado com Sucesso');
+        return redirect()->route('departamentos.index')->with('Sucesso', 'Departamento Cadastrado com Sucesso!');
     }
-   
 }

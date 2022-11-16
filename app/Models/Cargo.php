@@ -10,7 +10,6 @@ class Cargo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'descricao','id_cargo'
+        'descricao'
     ];
-
 }
