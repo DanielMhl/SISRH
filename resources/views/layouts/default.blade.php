@@ -43,6 +43,12 @@
               <li class="nav-item px-3">
                 <a class="nav-link" href="{{route('usuarios.index')}}">Usuários</a>
               </li>
+              <li class="nav-item px-3 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Olá {{ auth()->user()->name }}</a>
+                <ul class="dropdown-menu">
+                    <li><a href="" class="dropdown-item">Alterar Dados</a></li>
+                    <li><a  class="dropdown-item" href="{{ route('login.logout') }}">Sair</a></li>
+                
             </ul>
           </div>
         </div>

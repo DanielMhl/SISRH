@@ -71,12 +71,7 @@
                             @foreach ($departamentos as $departamento)
                                 <option value="{{ $departamento->id }}">{{ $departamento->nome }}</option>
                             @endforeach
-                            {{-- <option selected> </option>
-                            <option value="1">Departamento de Tecnologia</option>
-                            <option value="2">Departamento Financeiro</option>
-                            <option value="3">Departamento Comercial</option>
-                            <option value="4">Zeladoria</option>
-                            <option value="5">Recursos Humanos</option> --}}
+                        
                         </select>
                     </div>
                 </div>
@@ -91,15 +86,7 @@
                             @foreach ($cargos as $cargo)
                                 <option value="{{ $cargo->id }}">{{ $cargo->descricao }}</option>
                             @endforeach
-                            {{-- <option selected> </option>
-                            <option value="1">Gerente de Tecnologia</option>
-                            <option value="2">Gerente Financeiro</option>
-                            <option value="3">Gerente Comercial</option>
-                            <option value="4">Supervisor</option>
-                            <option value="5">Auxiliar de Limpeza</option>
-                            <option value="6">Auxiliar Administrativo</option>
-                            <option value="7">Técnico de Informática</option>
-                            <option value="8">Assistente Comercial</option> --}}
+                        
                         </select>
                     </div>
                 </div>

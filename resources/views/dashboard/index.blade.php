@@ -28,7 +28,7 @@
     MAIOR QUE 100
 @endif --}}
 
-@section('content')
+@section('conteudo')
     <h1 class="mb-5">Dashboard</h1>
 
     <div class="row g-5">
